@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #575163;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateAccountController">
+   <children>
+      <Text fill="#27be25" layoutX="52.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create new account" textAlignment="CENTER" wrappingWidth="304.13671875">
+         <font>
+            <Font name="French Script MT" size="48.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Name_Field" layoutX="32.0" layoutY="105.0" promptText="Name" />
+      <TextField fx:id="Surname_Field" layoutX="214.0" layoutY="105.0" prefHeight="25.0" prefWidth="149.0" promptText="Surname" />
+      <DatePicker fx:id="Birthday_Field" layoutX="32.0" layoutY="153.0" prefHeight="25.0" prefWidth="149.0" promptText="Birthday" />
+      <TextField fx:id="Country_Field" layoutX="214.0" layoutY="153.0" prefHeight="25.0" prefWidth="149.0" promptText="country" />
+      <TextField fx:id="Username_Field" layoutX="32.0" layoutY="263.0" prefHeight="25.0" prefWidth="336.0" promptText="Username" />
+      <TextField fx:id="Email_Field" layoutX="33.0" layoutY="208.0" prefHeight="25.0" prefWidth="336.0" promptText="Email" />
+      <PasswordField fx:id="Password_Field" layoutX="30.0" layoutY="344.0" prefHeight="25.0" prefWidth="336.0" promptText="Password" />
+      <PasswordField fx:id="ConfirmPassword_Field" layoutX="30.0" layoutY="395.0" prefHeight="25.0" prefWidth="336.0" promptText="Confirm password" />
+      <Text fill="#27be25" layoutX="30.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use 8 or more characters with a mix of letters &amp; numbers(more than 3 numbers)." wrappingWidth="336.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#27be25" layoutX="31.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can use letters &amp; numbers." wrappingWidth="213.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <CheckBox layoutX="31.0" layoutY="471.0" mnemonicParsing="false" onAction="#ShowPass" prefHeight="17.0" prefWidth="126.0" text="Show password" textFill="#27be25">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="151.0" layoutY="497.0" mnemonicParsing="false" onAction="#SingUp" prefHeight="46.0" prefWidth="95.0" text="Sing Up">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="Password_Visible" layoutX="30.0" layoutY="344.0" prefHeight="25.0" prefWidth="336.0" promptText="Password" visible="false" />
+      <TextField fx:id="ConfirmPassword_Visible" layoutX="30.0" layoutY="395.0" prefHeight="25.0" prefWidth="336.0" promptText="Confirm password" visible="false" />
+      <Text fill="#27be25" layoutX="32.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="39.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#27be25" layoutX="214.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" wrappingWidth="115.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#27be25" layoutX="32.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bithday" wrappingWidth="105.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#27be25" layoutX="214.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" wrappingWidth="53.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#27be25" layoutX="33.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="47.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#27be25" layoutX="32.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="149.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#27be25" layoutX="30.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="195.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="#27be25" layoutX="29.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm password" wrappingWidth="304.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="InvalidEmail_Field" fill="#e80808" layoutX="297.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid email" visible="false" wrappingWidth="72.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="EmptyBirthdayField" fill="#e80808" layoutX="99.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter birthday" visible="false" wrappingWidth="83.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="EmptyNameField" fill="#e80808" layoutX="114.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter name" visible="false" wrappingWidth="66.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="EmptySurnameField" fill="#e80808" layoutX="287.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter surname" visible="false" wrappingWidth="83.13671875" />
+      <Text fx:id="EmptyCountryField" fill="#e80808" layoutX="287.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter country" visible="false" wrappingWidth="83.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="EmptyEmailField" fill="#e80808" layoutX="300.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter email" visible="false" wrappingWidth="66.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="EmptyUsernameField" fill="#e80808" layoutX="276.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter username" visible="false" wrappingWidth="95.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="InvalidPassword" fill="#e80808" layoutX="269.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid password" visible="false" wrappingWidth="105.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="EmptyPasswordField" fill="#e80808" layoutX="277.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter password" visible="false" wrappingWidth="95.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="PasswordNotMatch" fill="#e80808" layoutX="187.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Those passwords didn’t match." visible="false" wrappingWidth="179.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
