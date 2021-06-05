@@ -1,12 +1,9 @@
 package Controller;
 
-import Model.DataBase;
-import Model.Person;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
 import java.time.LocalDate;
@@ -102,14 +99,7 @@ public class CreateAccountController {
             CheckConfirmPassword(ConfirmPassword_Visible.getText());
         }
         if (CheckStatus(Array)) {
-            DataBase.getDataBase().addClient(new Person(Name,
-                    Surname,
-                    Birthday,
-                    Country,
-                    Email,
-                    Username,
-                    FinallyPassword)
-            );
+
         }
     }
     private Date DateConvertor(String Date){
