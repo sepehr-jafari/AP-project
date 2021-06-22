@@ -1,27 +1,30 @@
 package Model.Server;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.net.Socket;
+import Model.Message.Message2;
+
+import java.io.*;
 
 public class ClientHandler implements Runnable{
-    private final ObjectOutputStream oos;
-    private final ObjectInputStream ois;
-    private ConnectionHandler ch;
-    private final Socket socket;
-    public ClientHandler(Socket socket, ObjectInputStream ois, ObjectOutputStream oos)
-    {
-        this.socket = socket;
-        this.oos = oos;
-        this.ois = ois;
-        ch = new ConnectionHandler(oos, ois);
+    volatile private ConnectionHandler ch;
 
+    public ClientHandler(ConnectionHandler ch) {
+        this.ch = ch;
     }
+
+
 
     @Override
     public void run() {
+        while (true){
+            try {
+                Message2 message = (Message2) ch.getInputStream().readObject();
+                message.handle(ch);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 }
