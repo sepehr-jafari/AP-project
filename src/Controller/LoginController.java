@@ -1,5 +1,8 @@
 package Controller;
 
+import Model.Client.Client;
+import Model.Main;
+import Model.Message.*;
 import Model.PageLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,25 +22,38 @@ public class LoginController {
     public TextField Password_visible;
 
     public void LogIn(ActionEvent actionEvent) {
+        String Password;
         String Username = Username_Field.getText();
-        String Password = Password_Field.getText();
+        if (!Password_visible.isVisible()) {
+            Password = Password_Field.getText();
+        }else {
+            Password = Password_visible.getText();
+        }
+        Client client = Main.client;
+        client.getResponse(new ConnectMessage2(Username));
+        String response = client.getResponse(new LogInMessage2(Username, Password)).getP();
+        if (response.equals("true")){
+            System.out.println("you can");
+        }else {
+            WrongPassword_Label.setVisible(true);
+        }
     }
+
     public void CreateAccount(ActionEvent actionEvent) throws IOException {
         new PageLoader().load("CreateAccount");
     }
 
     public void ShowPass(ActionEvent actionEvent) {
-        if (!Password_visible.isVisible()){
+        if (!Password_visible.isVisible()) {
             Password_visible.setVisible(true);
             Password_Field.setVisible(false);
             Password_visible.setText(Password_Field.getText());
-        }else {
+        } else {
             Password_visible.setVisible(false);
             Password_Field.setVisible(true);
             Password_Field.setText(Password_visible.getText());
         }
     }
-
 
 
 }
