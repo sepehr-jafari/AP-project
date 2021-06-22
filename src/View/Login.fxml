@@ -13,7 +13,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #575163;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
    <children>
-      <Button fx:id="Login_Button" layoutX="54.0" layoutY="414.0" mnemonicParsing="false" onAction="#LogIn" prefHeight="31.0" prefWidth="287.0" text="Log In">
+      <Button fx:id="Login_Button" layoutX="54.0" layoutY="414.0" mnemonicParsing="false" onAction="#LogIn" prefHeight="31.0" prefWidth="287.0" text="Log in">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
