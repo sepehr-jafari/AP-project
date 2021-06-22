@@ -27,4 +27,8 @@ public class Person implements Serializable {
         this.Username = Username;
         this.Password = Password;
     }
+
+    public String getUsername() {
+        return Username;
+    }
 }
