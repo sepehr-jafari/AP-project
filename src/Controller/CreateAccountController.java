@@ -1,11 +1,17 @@
 package Controller;
 
+import Model.Main;
+import Model.Message.SingUpMessage2;
+import Model.Message.UserExistMessage;
+import Model.PageLoader;
+import Model.Person;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.regex.Matcher;
@@ -34,6 +40,7 @@ public class CreateAccountController {
     public Text InvalidPassword;
     public Text EmptyPasswordField;
     public Text PasswordNotMatch;
+    public Text UsernameAlreadyExist;
     private String FinallyPassword;
     private boolean AllowToCreateAccount;
     private Boolean[] Array = new Boolean[8];
@@ -99,6 +106,7 @@ public class CreateAccountController {
             CheckConfirmPassword(ConfirmPassword_Visible.getText());
         }
         if (CheckStatus(Array)) {
+            Main.client.SendMessage(new SingUpMessage2(new Person(Name,Surname,Birthday,Country,Email,Username,Password)));
 
         }
     }
@@ -110,7 +118,7 @@ public class CreateAccountController {
 
     private Boolean CheckEmail(String Email) {
 
-        if (Email==""){
+        if (Email.equals("")){
             EmptyEmailField.setVisible(true);
             Array[0]=false;
             return false;
@@ -145,7 +153,7 @@ public class CreateAccountController {
         return true;
     }
     private Boolean CheckName(String Name){
-        if (Name == ""){
+        if (Name.equals("")){
             EmptyNameField.setVisible(true);
 //            AllowToCreateAccount=false;
             Array[2]=false;
@@ -156,7 +164,7 @@ public class CreateAccountController {
         return true;
     }
     private boolean CheckSurname(String Surname){
-        if (Surname==""){
+        if (Surname.equals("")){
             EmptySurnameField.setVisible(true);
             Array[3]=false;
             return false;
@@ -166,7 +174,7 @@ public class CreateAccountController {
         return true;
     }
     private boolean CheckCountry(String Country){
-        if (Country==""){
+        if (Country.equals("")){
             EmptyCountryField.setVisible(true);
             Array[4]=false;
             return false;
@@ -176,17 +184,25 @@ public class CreateAccountController {
         return true;
     }
     private boolean CheckUsername(String Username){
-        if (Username==""){
+        if (Username.equals("")){
             EmptyUsernameField.setVisible(true);
             Array[5]=false;
             return false;
+        }else {
+            String response = Main.client.getResponse(new UserExistMessage(Username)).getP();
+            if (response.equals("true")){
+                UsernameAlreadyExist.setVisible(true);
+                Array[5] = false;
+                return false;
+            }
+            UsernameAlreadyExist.setVisible(false);
         }
         EmptyUsernameField.setVisible(false);
         Array[5]=true;
         return true;
     }
     private boolean CheckPassword(String Password){
-        if (Password==""){
+        if (Password.equals("")){
             EmptyPasswordField.setVisible(true);
             Array[6]=false;
             return false;
@@ -207,7 +223,7 @@ public class CreateAccountController {
         }
     }
     private boolean CheckConfirmPassword(String ConfirmPassword){
-        if (ConfirmPassword.equals(FinallyPassword)==false){
+        if (ConfirmPassword.equals(FinallyPassword)==false&&!(ConfirmPassword.equals(""))){
             PasswordNotMatch.setVisible(true);
             Array[7]=false;
             return false;
@@ -224,5 +240,13 @@ public class CreateAccountController {
             }
         }
         return true;
+    }
+
+    public void BackLogInPage(ActionEvent actionEvent) {
+        try {
+            new PageLoader().load("Login");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
