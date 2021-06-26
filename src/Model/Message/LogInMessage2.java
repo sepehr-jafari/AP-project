@@ -3,6 +3,8 @@ package Model.Message;
 import Model.Person;
 import Model.Server.ConnectionHandler;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Set;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -32,6 +34,11 @@ public class LogInMessage2 extends Message2{
             }
         }
         Lock.readLock().unlock();
+        System.out.println("action: login");
+        System.out.println(Username + " login");
+        SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
+        Date date = new Date(System.currentTimeMillis());
+        System.out.println(formatter.format(date));
         connectionHandler.SendMessage(new TextMessage2(UserWithThisPassExist));
 
     }
