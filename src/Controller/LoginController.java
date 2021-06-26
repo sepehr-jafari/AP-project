@@ -20,10 +20,11 @@ public class LoginController {
     public Button Login_Button;
     public Label WrongPassword_Label;
     public TextField Password_visible;
+    private static String Username;
 
     public void LogIn(ActionEvent actionEvent) {
         String Password;
-        String Username = Username_Field.getText();
+        Username = Username_Field.getText();
         if (!Password_visible.isVisible()) {
             Password = Password_Field.getText();
         }else {
@@ -33,7 +34,12 @@ public class LoginController {
         client.getResponse(new ConnectMessage2(Username));
         String response = client.getResponse(new LogInMessage2(Username, Password)).getP();
         if (response.equals("true")){
-            System.out.println("you can");
+            try {
+                client.setUsername(Username);
+                new PageLoader().load("TimeLine");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }else {
             WrongPassword_Label.setVisible(true);
         }
@@ -55,5 +61,11 @@ public class LoginController {
         }
     }
 
+    public static String getUsername() {
+        return Username;
+    }
 
+    public static void setUsername(String username) {
+        Username = username;
+    }
 }
