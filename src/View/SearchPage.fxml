@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #563b0d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SearchPageController">
+   <children>
+      <ListView fx:id="personsList" layoutY="65.0" prefHeight="467.0" prefWidth="400.0" />
+      <Separator layoutY="532.0" prefHeight="3.0" prefWidth="400.0" />
+      <Button layoutX="35.0" layoutY="535.0" mnemonicParsing="false" onAction="#homePage" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/images.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="102.0" layoutY="535.0" mnemonicParsing="false" onAction="#searchPage" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/download%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="175.0" layoutY="535.0" mnemonicParsing="false" onAction="#addPostPage" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/download.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="330.0" layoutY="535.0" mnemonicParsing="false" onAction="#profilePage" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/account-avatar-profile-human-man-user-30448.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#27be25" layoutX="155.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="90.13671875">
+         <font>
+            <Font name="French Script MT" size="48.0" />
+         </font>
+      </Text>
+      <Separator layoutY="63.0" prefWidth="400.0" />
+   </children>
+</Pane>
