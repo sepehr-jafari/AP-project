@@ -34,36 +34,6 @@ public class Client {
     }
 
 
-
-    public Message2 getResponse(){
-        Message2 message = null;
-        try {
-            if (ois!=null) {
-                message = (Message2) ois.readObject();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return message;
-    }
-    public void SendMessage(Message2 message2){
-
-        try {
-            if (oos!=null) {
-                oos.writeObject(message2);
-                oos.flush();
-                oos.reset();
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public ObjectInputStream getOis() {
-        return ois;
-    }
     public Message2 getResponse(Message2 toSend){
         Object message2 = null;
         try {
@@ -83,5 +53,13 @@ public class Client {
             return (Message2) message2;
         }
         return null;
+    }
+
+    public void setUsername(String username) {
+        Username = username;
+    }
+
+    public String getUsername() {
+        return Username;
     }
 }
