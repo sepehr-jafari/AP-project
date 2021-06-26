@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #563b0d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CommentsController">
+   <children>
+      <Separator layoutY="532.0" prefHeight="3.0" prefWidth="400.0" />
+      <TextArea fx:id="comment" layoutX="16.0" layoutY="540.0" prefHeight="25.0" prefWidth="290.0" promptText="Comment" />
+      <Button layoutX="323.0" layoutY="547.0" mnemonicParsing="false" onAction="#sendComment" prefHeight="25.0" prefWidth="43.0" text="Send" />
+      <ListView fx:id="comments" layoutY="55.0" prefHeight="475.0" prefWidth="400.0" style="-fx-border-color: #f0ce95;" />
+      <Separator layoutY="50.0" prefHeight="6.0" prefWidth="400.0" />
+      <Button layoutX="14.0" layoutY="3.0" mnemonicParsing="false" onAction="#Exit" prefHeight="44.0" prefWidth="43.0" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/download%20(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</Pane>
