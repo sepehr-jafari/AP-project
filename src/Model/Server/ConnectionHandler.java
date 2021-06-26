@@ -26,6 +26,7 @@ public class ConnectionHandler {
         try {
             oos.writeObject(message);
             oos.flush();
+            oos.reset();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -37,5 +38,13 @@ public class ConnectionHandler {
 
     public ObjectInputStream getInputStream() {
         return ois;
+    }
+    public void close(){
+        try {
+            oos.close();
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
