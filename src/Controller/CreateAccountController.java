@@ -106,7 +106,14 @@ public class CreateAccountController {
             CheckConfirmPassword(ConfirmPassword_Visible.getText());
         }
         if (CheckStatus(Array)) {
-            Main.client.SendMessage(new SingUpMessage2(new Person(Name,Surname,Birthday,Country,Email,Username,Password)));
+            Main.client.setUsername(Username);
+            Main.client.getResponse(new SingUpMessage2(new Person(Name,Surname,Birthday,Country,Email,Username,Password)));
+            TimeLineController.setComeFromSignUp(true,Username);
+            try {
+                new PageLoader().load("TimeLine");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
         }
     }
