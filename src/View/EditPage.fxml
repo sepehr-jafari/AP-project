@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #563b0d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditPageController">
+   <children>
+      <ImageView fitHeight="110.0" fitWidth="133.0" layoutX="146.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/F:/images/person-icon-male-add-user-profile-avatar-plus-vector-21206637.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="123.0" layoutY="134.0" mnemonicParsing="false" onAction="#setPhoto" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #563b0d;" text="Change Profile Photo" textFill="#f5f7f8">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="name" layoutX="36.0" layoutY="189.0" prefHeight="25.0" prefWidth="355.0" promptText="Name" style="-fx-background-color: #563b0d;" />
+      <TextField fx:id="surname" layoutX="36.0" layoutY="239.0" prefHeight="25.0" prefWidth="355.0" promptText="Surname" style="-fx-background-color: #563b0d;" />
+      <TextField fx:id="country" layoutX="35.0" layoutY="288.0" prefHeight="25.0" prefWidth="355.0" promptText="Country" style="-fx-background-color: #563b0d;" />
+      <TextField fx:id="email" layoutX="36.0" layoutY="333.0" prefHeight="25.0" prefWidth="355.0" promptText="Email" style="-fx-background-color: #563b0d;" />
+      <Button layoutX="10.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/download%20(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="346.0" layoutY="6.0" mnemonicParsing="false" onAction="#setChange" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/download%20(3).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Line endX="253.0" layoutX="137.0" layoutY="214.0" startX="-100.0" stroke="#f5f7f8" />
+      <Line endX="253.0" layoutX="137.0" layoutY="264.0" startX="-100.0" stroke="#f5f7f8" />
+      <Line endX="253.0" layoutX="137.0" layoutY="312.0" startX="-100.0" stroke="#f5f7f8" />
+      <Line endX="253.0" layoutX="137.0" layoutY="357.0" startX="-100.0" stroke="#f5f7f8" />
+      <Line endX="253.0" layoutX="137.0" layoutY="404.0" startX="-100.0" stroke="#f5f7f8" />
+      <Line endX="253.0" layoutX="137.0" layoutY="445.0" startX="-100.0" stroke="#f5f7f8" />
+      <PasswordField fx:id="password" layoutX="35.0" layoutY="377.0" prefHeight="25.0" prefWidth="354.0" promptText="Password" style="-fx-background-color: #563b0d;" />
+      <PasswordField fx:id="confirmPassword" layoutX="35.0" layoutY="418.0" prefHeight="25.0" prefWidth="354.0" promptText="Confirm Password" style="-fx-background-color: #563b0d;" />
+      <Text fx:id="invalidPassword" fill="#e80808" layoutX="304.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Password" visible="false" wrappingWidth="91.0" />
+      <Text fx:id="PasswordsMatchError" fill="#e80808" layoutX="222.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Those passwords didn’t match." visible="false" wrappingWidth="163.13671875" />
+   </children>
+</Pane>
