@@ -1,10 +1,10 @@
 package Model.Server;
 
+import Model.ClientAndServerAccess.ConnectionHandler;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Server {
     public final static int PORT = 2222;

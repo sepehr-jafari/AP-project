@@ -1,8 +1,8 @@
 package Model.Server;
 
-import Model.Comment;
-import Model.Person;
-import Model.Post;
+import Model.ClientAndServerAccess.Comment;
+import Model.ClientAndServerAccess.Person;
+import Model.ClientAndServerAccess.Post;
 
 import java.io.*;
 import java.util.ArrayList;
