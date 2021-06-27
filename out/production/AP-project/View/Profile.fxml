@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #563b0d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfileController">
+   <children>
+      <ImageView fx:id="profileImage" fitHeight="92.0" fitWidth="99.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/F:/images/account-avatar-profile-human-man-user-30448.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="username" layoutX="20.0" layoutY="97.0" prefHeight="17.0" prefWidth="178.0" text="username" textFill="#27be25">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Text fill="#27be25" layoutX="143.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posts" wrappingWidth="44.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Label fx:id="numberOfPosts" layoutX="143.0" layoutY="36.0" prefHeight="17.0" prefWidth="44.0" text="0" textAlignment="CENTER" textFill="#27be25">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Text fill="#27be25" layoutX="207.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Followers" wrappingWidth="71.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fill="#27be25" layoutX="294.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Following" wrappingWidth="92.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Label fx:id="numberOfFollower" layoutX="207.0" layoutY="36.0" prefHeight="17.0" prefWidth="44.0" text="0" textAlignment="CENTER" textFill="#27be25">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberOfFollowing" layoutX="294.0" layoutY="36.0" prefHeight="17.0" prefWidth="44.0" text="0" textAlignment="CENTER" textFill="#27be25">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutY="118.0" mnemonicParsing="false" onAction="#EditPage" prefHeight="19.0" prefWidth="400.0" text="Edit Profile">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ListView fx:id="PostList" layoutX="-1.0" layoutY="150.0" prefHeight="382.0" prefWidth="400.0" />
+      <Separator layoutX="-1.0" layoutY="148.0" prefHeight="2.0" prefWidth="400.0" />
+      <Separator layoutY="532.0" prefHeight="3.0" prefWidth="400.0" />
+      <Button layoutX="35.0" layoutY="536.0" mnemonicParsing="false" onAction="#HomePage" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/images.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="102.0" layoutY="536.0" mnemonicParsing="false" onAction="#searchPage" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/download%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="175.0" layoutY="535.0" mnemonicParsing="false" onAction="#addPostPage" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/download.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="330.0" layoutY="535.0" mnemonicParsing="false" onAction="#profilePage" style="-fx-background-color: #563b0d;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/F:/images/account-avatar-profile-human-man-user-30448.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</Pane>

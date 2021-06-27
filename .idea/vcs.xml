@@ -6,6 +6,7 @@
     <mapping directory="$PROJECT_DIR$/src/Controller" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/Data" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/Model" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/Model/Server/Data" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/View" vcs="Git" />
   </component>
 </project>
