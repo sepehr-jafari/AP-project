@@ -2,11 +2,10 @@ package Controller;
 
 import Model.Client.Client;
 import Model.Main;
-import Model.Message.GetPostsMessage;
 import Model.Message.GetProfileMessage;
 import Model.PageLoader;
-import Model.Person;
-import Model.Post;
+import Model.ClientAndServerAccess.Person;
+import Model.ClientAndServerAccess.Post;
 import javafx.collections.FXCollections;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
@@ -14,13 +13,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;

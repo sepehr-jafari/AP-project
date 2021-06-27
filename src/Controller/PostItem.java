@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.Post;
+import Model.ClientAndServerAccess.Post;
 import javafx.scene.control.ListCell;
 
 import java.io.IOException;

@@ -4,7 +4,7 @@ import Model.Main;
 import Model.Message.SingUpMessage2;
 import Model.Message.UserExistMessage;
 import Model.PageLoader;
-import Model.Person;
+import Model.ClientAndServerAccess.Person;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;

@@ -3,7 +3,7 @@ package Controller;
 import Model.Main;
 import Model.Message.*;
 import Model.PageLoader;
-import Model.Post;
+import Model.ClientAndServerAccess.Post;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;

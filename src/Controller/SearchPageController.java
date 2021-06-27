@@ -3,7 +3,7 @@ package Controller;
 import Model.Main;
 import Model.Message.GetUsersMessage;
 import Model.PageLoader;
-import Model.Person;
+import Model.ClientAndServerAccess.Person;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +11,6 @@ import javafx.scene.control.ListView;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.ConcurrentLinkedQueue;
 

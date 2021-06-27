@@ -5,13 +5,11 @@ import Model.Main;
 import Model.Message.GetPostsMessage;
 import Model.Message.GetProfileMessage;
 import Model.PageLoader;
-import Model.Person;
-import Model.Post;
+import Model.ClientAndServerAccess.Person;
+import Model.ClientAndServerAccess.Post;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 
 import java.io.IOException;

@@ -1,7 +1,7 @@
 package Controller;
 
 import Model.PageLoader;
-import Model.Person;
+import Model.ClientAndServerAccess.Person;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
@@ -10,7 +10,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import javax.imageio.ImageIO;
-import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

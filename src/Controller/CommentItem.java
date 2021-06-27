@@ -1,11 +1,7 @@
 package Controller;
 
-import Model.Comment;
-import Model.Post;
+import Model.ClientAndServerAccess.Comment;
 import javafx.scene.control.ListCell;
-
-import java.awt.*;
-import java.io.IOException;
 
 public class CommentItem extends ListCell<Comment> {
     @Override

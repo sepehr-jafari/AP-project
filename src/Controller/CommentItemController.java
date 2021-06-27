@@ -1,8 +1,7 @@
 package Controller;
 
-import Model.Comment;
+import Model.ClientAndServerAccess.Comment;
 import Model.PageLoader;
-import Model.Post;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;

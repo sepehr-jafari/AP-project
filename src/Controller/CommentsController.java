@@ -1,10 +1,10 @@
 package Controller;
 
-import Model.Comment;
+import Model.ClientAndServerAccess.Comment;
 import Model.Main;
 import Model.Message.AddCommentMessage;
 import Model.PageLoader;
-import Model.Post;
+import Model.ClientAndServerAccess.Post;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

@@ -5,8 +5,8 @@ import Model.Main;
 import Model.Message.AddPostMessage;
 import Model.Message.GetProfileMessage;
 import Model.PageLoader;
-import Model.Person;
-import Model.Post;
+import Model.ClientAndServerAccess.Person;
+import Model.ClientAndServerAccess.Post;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
@@ -18,7 +18,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;

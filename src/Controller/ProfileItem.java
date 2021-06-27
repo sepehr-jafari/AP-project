@@ -1,10 +1,7 @@
 package Controller;
 
-import Model.Person;
-import Model.Post;
+import Model.ClientAndServerAccess.Person;
 import javafx.scene.control.ListCell;
-
-import java.io.IOException;
 
 public class ProfileItem  extends ListCell<Person> {
     @Override
