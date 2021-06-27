@@ -44,7 +44,10 @@ public class AddNewPostController {
         String publishDate = formatter.format(date);
         Post post = new Post(PostTitle.getText(), Username,PostDescription.getText(),publishDate);
         post.setPostImageProfile(ProfileController.profile.getImage());
-        post.setUID("" + date.getTime());
+        Long min = 10L;
+        Long max = 90000L;
+        Long random_int = (long) Math.floor(Math.random()*(max-min+1)+min);
+        post.setUID("" + date.getTime()+random_int);
         if (postHasPhoto){
             post.setImage(Image);
         }
