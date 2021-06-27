@@ -1,6 +1,7 @@
 package Model;
 
 import Model.Client.Client;
+import Model.PageLoader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
