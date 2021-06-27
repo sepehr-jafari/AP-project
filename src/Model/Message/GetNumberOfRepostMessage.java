@@ -1,6 +1,6 @@
 package Model.Message;
 
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 public class GetNumberOfRepostMessage extends Message2{
     public static final long serialVersionUID = 287263109L;

@@ -1,15 +1,12 @@
 package Model.Message;
 
-import Model.PageLoader;
-import Model.Person;
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 import javafx.scene.image.Image;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class EditProfileMessage extends Message2{
     public static final long serialVersionUID =764374L;

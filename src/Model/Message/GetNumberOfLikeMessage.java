@@ -1,6 +1,6 @@
 package Model.Message;
 
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 public class GetNumberOfLikeMessage extends Message2{
     public static final long serialVersionUID = 54683466987L;

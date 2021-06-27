@@ -1,8 +1,8 @@
 package Model.Message;
 
-import Model.Comment;
-import Model.Post;
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.Comment;
+import Model.ClientAndServerAccess.Post;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

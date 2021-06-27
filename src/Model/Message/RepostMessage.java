@@ -1,8 +1,7 @@
 package Model.Message;
 
-import Model.Post;
-import Model.Server.ConnectionHandler;
-import javafx.geometry.Pos;
+import Model.ClientAndServerAccess.Post;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 public class RepostMessage extends Message2{
     public static final long serialVersionUID =67500077L;

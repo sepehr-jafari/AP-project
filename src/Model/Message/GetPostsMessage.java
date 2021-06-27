@@ -1,9 +1,8 @@
 package Model.Message;
 
-import Model.Person;
-import Model.Post;
-import Model.Server.ConnectionHandler;
-import javafx.geometry.Pos;
+import Model.ClientAndServerAccess.Person;
+import Model.ClientAndServerAccess.Post;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

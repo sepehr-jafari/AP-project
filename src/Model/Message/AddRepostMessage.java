@@ -1,7 +1,7 @@
 package Model.Message;
 
-import Model.Post;
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.Post;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 public class AddRepostMessage extends Message2{
     public static final long serialVersionUID = 9726435L;

@@ -1,7 +1,7 @@
 package Model.Message;
 
-import Model.Person;
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.Person;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 

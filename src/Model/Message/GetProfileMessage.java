@@ -1,12 +1,10 @@
 package Model.Message;
 
-import Model.Person;
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.Person;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class GetProfileMessage extends Message2{

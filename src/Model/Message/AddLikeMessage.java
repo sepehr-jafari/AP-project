@@ -1,7 +1,7 @@
 package Model.Message;
 
-import Model.Post;
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.Post;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

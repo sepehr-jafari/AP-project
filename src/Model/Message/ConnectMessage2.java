@@ -1,6 +1,6 @@
 package Model.Message;
 
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

@@ -1,6 +1,6 @@
 package Model.Message;
 
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 public class ObjectMessage extends Message2{
     public static final long serialVersionUID = 7634763497L;

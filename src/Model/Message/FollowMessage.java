@@ -1,11 +1,9 @@
 package Model.Message;
 
-import Model.Person;
-import Model.Server.ConnectionHandler;
+import Model.ClientAndServerAccess.ConnectionHandler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class FollowMessage extends Message2{
     public static final long serialVersionUID = 9845442L;
